@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-genai.configure(api_key="AIzaSyDiea9hZxDwj69qiGlILlugPTE-pzKPygw")
+genai.configure(api_key="AIzaSyDlXx9osW1GrSz16rW62lQlirfu-ouEQq4")
 
 # Set up the model
 generation_config = {
