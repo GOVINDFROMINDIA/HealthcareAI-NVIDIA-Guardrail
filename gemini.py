@@ -34,6 +34,14 @@ model = genai.GenerativeModel(model_name="gemini-1.0-pro",
                               safety_settings=safety_settings)
 convo = model.start_chat(history=[])
 
-convo.send_message("give essay on environment,:" )
-ans=convo.last.text
-print(ans)
+print("Chat with the AI model. Type 'QUIT' to exit.")
+
+while True:
+    user_input = input("You: ")
+    
+    if user_input.upper() == "QUIT":
+        print("Exiting the chat. Goodbye!")
+        break
+    
+    response = convo.send_message(user_input)
+    print("AI:", response.text)
